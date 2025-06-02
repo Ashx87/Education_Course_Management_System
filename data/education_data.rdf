@@ -1,0 +1,412 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/education#"
+     xml:base="http://example.org/education"
+     xmlns:edu="http://example.org/education#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Department Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <Department rdf:about="http://example.org/education#ComputerScience">
+        <hasName>Computer Science</hasName>
+        <rdfs:label>Computer Science Department</rdfs:label>
+    </Department>
+
+    <Department rdf:about="http://example.org/education#Mathematics">
+        <hasName>Mathematics</hasName>
+        <rdfs:label>Mathematics Department</rdfs:label>
+    </Department>
+
+    <Department rdf:about="http://example.org/education#Engineering">
+        <hasName>Engineering</hasName>
+        <rdfs:label>Engineering Department</rdfs:label>
+    </Department>
+
+    <Department rdf:about="http://example.org/education#Business">
+        <hasName>Business Administration</hasName>
+        <rdfs:label>Business Administration Department</rdfs:label>
+    </Department>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Skill Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <Skill rdf:about="http://example.org/education#Programming">
+        <hasName>Programming</hasName>
+        <rdfs:label>Programming Skills</rdfs:label>
+    </Skill>
+
+    <Skill rdf:about="http://example.org/education#Algorithms">
+        <hasName>Algorithms</hasName>
+        <rdfs:label>Algorithm Design and Analysis</rdfs:label>
+    </Skill>
+
+    <Skill rdf:about="http://example.org/education#Databases">
+        <hasName>Databases</hasName>
+        <rdfs:label>Database Design and Management</rdfs:label>
+    </Skill>
+
+    <Skill rdf:about="http://example.org/education#MathematicalAnalysis">
+        <hasName>Mathematical Analysis</hasName>
+        <rdfs:label>Mathematical Analysis Skills</rdfs:label>
+    </Skill>
+
+    <Skill rdf:about="http://example.org/education#Statistics">
+        <hasName>Statistics</hasName>
+        <rdfs:label>Statistical Analysis</rdfs:label>
+    </Skill>
+
+    <Skill rdf:about="http://example.org/education#WebDevelopment">
+        <hasName>Web Development</hasName>
+        <rdfs:label>Web Development Skills</rdfs:label>
+    </Skill>
+
+    <Skill rdf:about="http://example.org/education#MachineLearning">
+        <hasName>Machine Learning</hasName>
+        <rdfs:label>Machine Learning and AI</rdfs:label>
+    </Skill>
+
+    <Skill rdf:about="http://example.org/education#ProjectManagement">
+        <hasName>Project Management</hasName>
+        <rdfs:label>Project Management Skills</rdfs:label>
+    </Skill>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Course Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- Computer Science Courses -->
+    <UndergraduateCourse rdf:about="http://example.org/education#CS101">
+        <hasName>Introduction to Programming</hasName>
+        <hasCourseCode>CS101</hasCourseCode>
+        <hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasCredits>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">35</hasCapacity>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48</hasDuration>
+        <belongsToDepartment rdf:resource="http://example.org/education#ComputerScience"/>
+        <requiresSkill rdf:resource="http://example.org/education#Programming"/>
+        <hasDifficulty rdf:resource="http://example.org/education#BeginnerLevel"/>
+        <hasAssessment rdf:resource="http://example.org/education#FinalExam"/>
+        <hasAssessment rdf:resource="http://example.org/education#HomeworkAssignment"/>
+    </UndergraduateCourse>
+
+    <UndergraduateCourse rdf:about="http://example.org/education#CS201">
+        <hasName>Data Structures and Algorithms</hasName>
+        <hasCourseCode>CS201</hasCourseCode>
+        <hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasCredits>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</hasCapacity>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48</hasDuration>
+        <belongsToDepartment rdf:resource="http://example.org/education#ComputerScience"/>
+        <requiresSkill rdf:resource="http://example.org/education#Programming"/>
+        <requiresSkill rdf:resource="http://example.org/education#Algorithms"/>
+        <hasDifficulty rdf:resource="http://example.org/education#IntermediateLevel"/>
+        <hasPrerequisite rdf:resource="http://example.org/education#CS101"/>
+        <hasAssessment rdf:resource="http://example.org/education#FinalExam"/>
+        <hasAssessment rdf:resource="http://example.org/education#MidtermExam"/>
+        <hasAssessment rdf:resource="http://example.org/education#HomeworkAssignment"/>
+    </UndergraduateCourse>
+
+    <UndergraduateCourse rdf:about="http://example.org/education#CS301">
+        <hasName>Database Systems</hasName>
+        <hasCourseCode>CS301</hasCourseCode>
+        <hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasCredits>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</hasCapacity>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48</hasDuration>
+        <belongsToDepartment rdf:resource="http://example.org/education#ComputerScience"/>
+        <requiresSkill rdf:resource="http://example.org/education#Programming"/>
+        <requiresSkill rdf:resource="http://example.org/education#Databases"/>
+        <hasDifficulty rdf:resource="http://example.org/education#IntermediateLevel"/>
+        <hasPrerequisite rdf:resource="http://example.org/education#CS201"/>
+        <hasAssessment rdf:resource="http://example.org/education#FinalExam"/>
+        <hasAssessment rdf:resource="http://example.org/education#FinalProject"/>
+    </UndergraduateCourse>
+
+    <UndergraduateCourse rdf:about="http://example.org/education#CS302">
+        <hasName>Web Development</hasName>
+        <hasCourseCode>CS302</hasCourseCode>
+        <hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasCredits>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">28</hasCapacity>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48</hasDuration>
+        <belongsToDepartment rdf:resource="http://example.org/education#ComputerScience"/>
+        <requiresSkill rdf:resource="http://example.org/education#Programming"/>
+        <requiresSkill rdf:resource="http://example.org/education#WebDevelopment"/>
+        <hasDifficulty rdf:resource="http://example.org/education#IntermediateLevel"/>
+        <hasPrerequisite rdf:resource="http://example.org/education#CS101"/>
+        <hasAssessment rdf:resource="http://example.org/education#FinalProject"/>
+        <hasAssessment rdf:resource="http://example.org/education#HomeworkAssignment"/>
+    </UndergraduateCourse>
+
+    <GraduateCourse rdf:about="http://example.org/education#CS401">
+        <hasName>Machine Learning</hasName>
+        <hasCourseCode>CS401</hasCourseCode>
+        <hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasCredits>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</hasCapacity>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#int">64</hasDuration>
+        <belongsToDepartment rdf:resource="http://example.org/education#ComputerScience"/>
+        <requiresSkill rdf:resource="http://example.org/education#Programming"/>
+        <requiresSkill rdf:resource="http://example.org/education#Algorithms"/>
+        <requiresSkill rdf:resource="http://example.org/education#MachineLearning"/>
+        <requiresSkill rdf:resource="http://example.org/education#Statistics"/>
+        <hasDifficulty rdf:resource="http://example.org/education#AdvancedLevel"/>
+        <hasPrerequisite rdf:resource="http://example.org/education#CS201"/>
+        <hasPrerequisite rdf:resource="http://example.org/education#MATH201"/>
+        <hasAssessment rdf:resource="http://example.org/education#FinalProject"/>
+        <hasAssessment rdf:resource="http://example.org/education#HomeworkAssignment"/>
+    </GraduateCourse>
+
+    <LabCourse rdf:about="http://example.org/education#CS101L">
+        <hasName>Programming Lab</hasName>
+        <hasCourseCode>CS101L</hasCourseCode>
+        <hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasCredits>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</hasCapacity>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32</hasDuration>
+        <belongsToDepartment rdf:resource="http://example.org/education#ComputerScience"/>
+        <requiresSkill rdf:resource="http://example.org/education#Programming"/>
+        <hasDifficulty rdf:resource="http://example.org/education#BeginnerLevel"/>
+        <hasAssessment rdf:resource="http://example.org/education#HomeworkAssignment"/>
+    </LabCourse>
+
+    <!-- Mathematics Courses -->
+    <UndergraduateCourse rdf:about="http://example.org/education#MATH101">
+        <hasName>Calculus I</hasName>
+        <hasCourseCode>MATH101</hasCourseCode>
+        <hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasCredits>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">40</hasCapacity>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#int">64</hasDuration>
+        <belongsToDepartment rdf:resource="http://example.org/education#Mathematics"/>
+        <requiresSkill rdf:resource="http://example.org/education#MathematicalAnalysis"/>
+        <hasDifficulty rdf:resource="http://example.org/education#BeginnerLevel"/>
+        <hasAssessment rdf:resource="http://example.org/education#FinalExam"/>
+        <hasAssessment rdf:resource="http://example.org/education#MidtermExam"/>
+    </UndergraduateCourse>
+
+    <UndergraduateCourse rdf:about="http://example.org/education#MATH201">
+        <hasName>Statistics and Probability</hasName>
+        <hasCourseCode>MATH201</hasCourseCode>
+        <hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasCredits>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">35</hasCapacity>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48</hasDuration>
+        <belongsToDepartment rdf:resource="http://example.org/education#Mathematics"/>
+        <requiresSkill rdf:resource="http://example.org/education#MathematicalAnalysis"/>
+        <requiresSkill rdf:resource="http://example.org/education#Statistics"/>
+        <hasDifficulty rdf:resource="http://example.org/education#IntermediateLevel"/>
+        <hasPrerequisite rdf:resource="http://example.org/education#MATH101"/>
+        <hasAssessment rdf:resource="http://example.org/education#FinalExam"/>
+        <hasAssessment rdf:resource="http://example.org/education#HomeworkAssignment"/>
+    </UndergraduateCourse>
+
+    <!-- Business Courses -->
+    <UndergraduateCourse rdf:about="http://example.org/education#BUS101">
+        <hasName>Introduction to Business</hasName>
+        <hasCourseCode>BUS101</hasCourseCode>
+        <hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasCredits>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</hasCapacity>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48</hasDuration>
+        <belongsToDepartment rdf:resource="http://example.org/education#Business"/>
+        <hasDifficulty rdf:resource="http://example.org/education#BeginnerLevel"/>
+        <hasAssessment rdf:resource="http://example.org/education#FinalExam"/>
+        <hasAssessment rdf:resource="http://example.org/education#HomeworkAssignment"/>
+    </UndergraduateCourse>
+
+    <UndergraduateCourse rdf:about="http://example.org/education#BUS301">
+        <hasName>Project Management</hasName>
+        <hasCourseCode>BUS301</hasCourseCode>
+        <hasCredits rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasCredits>
+        <hasCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</hasCapacity>
+        <hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#int">48</hasDuration>
+        <belongsToDepartment rdf:resource="http://example.org/education#Business"/>
+        <requiresSkill rdf:resource="http://example.org/education#ProjectManagement"/>
+        <hasDifficulty rdf:resource="http://example.org/education#IntermediateLevel"/>
+        <hasPrerequisite rdf:resource="http://example.org/education#BUS101"/>
+        <hasAssessment rdf:resource="http://example.org/education#FinalProject"/>
+        <hasAssessment rdf:resource="http://example.org/education#HomeworkAssignment"/>
+    </UndergraduateCourse>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Instructor Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <Instructor rdf:about="http://example.org/education#prof_smith">
+        <hasName>Dr. John Smith</hasName>
+        <hasEmail>john.smith@university.edu</hasEmail>
+        <worksInDepartment rdf:resource="http://example.org/education#ComputerScience"/>
+        <teaches rdf:resource="http://example.org/education#CS101"/>
+        <teaches rdf:resource="http://example.org/education#CS101L"/>
+        <hasSkill rdf:resource="http://example.org/education#Programming"/>
+        <hasSkill rdf:resource="http://example.org/education#Algorithms"/>
+    </Instructor>
+
+    <Instructor rdf:about="http://example.org/education#prof_jones">
+        <hasName>Dr. Sarah Jones</hasName>
+        <hasEmail>sarah.jones@university.edu</hasEmail>
+        <worksInDepartment rdf:resource="http://example.org/education#ComputerScience"/>
+        <teaches rdf:resource="http://example.org/education#CS201"/>
+        <teaches rdf:resource="http://example.org/education#CS301"/>
+        <hasSkill rdf:resource="http://example.org/education#Programming"/>
+        <hasSkill rdf:resource="http://example.org/education#Algorithms"/>
+        <hasSkill rdf:resource="http://example.org/education#Databases"/>
+    </Instructor>
+
+    <Instructor rdf:about="http://example.org/education#prof_brown">
+        <hasName>Dr. Michael Brown</hasName>
+        <hasEmail>michael.brown@university.edu</hasEmail>
+        <worksInDepartment rdf:resource="http://example.org/education#ComputerScience"/>
+        <teaches rdf:resource="http://example.org/education#CS302"/>
+        <teaches rdf:resource="http://example.org/education#CS401"/>
+        <hasSkill rdf:resource="http://example.org/education#Programming"/>
+        <hasSkill rdf:resource="http://example.org/education#WebDevelopment"/>
+        <hasSkill rdf:resource="http://example.org/education#MachineLearning"/>
+    </Instructor>
+
+    <Instructor rdf:about="http://example.org/education#prof_davis">
+        <hasName>Dr. Emily Davis</hasName>
+        <hasEmail>emily.davis@university.edu</hasEmail>
+        <worksInDepartment rdf:resource="http://example.org/education#Mathematics"/>
+        <teaches rdf:resource="http://example.org/education#MATH101"/>
+        <teaches rdf:resource="http://example.org/education#MATH201"/>
+        <hasSkill rdf:resource="http://example.org/education#MathematicalAnalysis"/>
+        <hasSkill rdf:resource="http://example.org/education#Statistics"/>
+    </Instructor>
+
+    <Instructor rdf:about="http://example.org/education#prof_wilson">
+        <hasName>Dr. Robert Wilson</hasName>
+        <hasEmail>robert.wilson@university.edu</hasEmail>
+        <worksInDepartment rdf:resource="http://example.org/education#Business"/>
+        <teaches rdf:resource="http://example.org/education#BUS101"/>
+        <teaches rdf:resource="http://example.org/education#BUS301"/>
+        <hasSkill rdf:resource="http://example.org/education#ProjectManagement"/>
+    </Instructor>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Student Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <Student rdf:about="http://example.org/education#student_001">
+        <hasName>Alice Johnson</hasName>
+        <hasStudentID>2021001</hasStudentID>
+        <hasEmail>alice.johnson@student.university.edu</hasEmail>
+        <hasGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.8</hasGPA>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasYear>
+        <enrollsIn rdf:resource="http://example.org/education#CS101"/>
+        <enrollsIn rdf:resource="http://example.org/education#CS101L"/>
+        <enrollsIn rdf:resource="http://example.org/education#MATH101"/>
+        <hasSkill rdf:resource="http://example.org/education#Programming"/>
+        <hasSkill rdf:resource="http://example.org/education#MathematicalAnalysis"/>
+    </Student>
+
+    <Student rdf:about="http://example.org/education#student_002">
+        <hasName>Bob Smith</hasName>
+        <hasStudentID>2021002</hasStudentID>
+        <hasEmail>bob.smith@student.university.edu</hasEmail>
+        <hasGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.5</hasGPA>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasYear>
+        <enrollsIn rdf:resource="http://example.org/education#CS101"/>
+        <enrollsIn rdf:resource="http://example.org/education#BUS101"/>
+        <hasSkill rdf:resource="http://example.org/education#Programming"/>
+    </Student>
+
+    <Student rdf:about="http://example.org/education#student_003">
+        <hasName>Carol Davis</hasName>
+        <hasStudentID>2021003</hasStudentID>
+        <hasEmail>carol.davis@student.university.edu</hasEmail>
+        <hasGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.9</hasGPA>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasYear>
+        <enrollsIn rdf:resource="http://example.org/education#CS201"/>
+        <enrollsIn rdf:resource="http://example.org/education#MATH201"/>
+        <hasSkill rdf:resource="http://example.org/education#Programming"/>
+        <hasSkill rdf:resource="http://example.org/education#Algorithms"/>
+        <hasSkill rdf:resource="http://example.org/education#MathematicalAnalysis"/>
+        <hasSkill rdf:resource="http://example.org/education#Statistics"/>
+    </Student>
+
+    <Student rdf:about="http://example.org/education#student_004">
+        <hasName>David Wilson</hasName>
+        <hasStudentID>2021004</hasStudentID>
+        <hasEmail>david.wilson@student.university.edu</hasEmail>
+        <hasGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.6</hasGPA>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</hasYear>
+        <enrollsIn rdf:resource="http://example.org/education#CS301"/>
+        <enrollsIn rdf:resource="http://example.org/education#CS302"/>
+        <hasSkill rdf:resource="http://example.org/education#Programming"/>
+        <hasSkill rdf:resource="http://example.org/education#Algorithms"/>
+        <hasSkill rdf:resource="http://example.org/education#Databases"/>
+        <hasSkill rdf:resource="http://example.org/education#WebDevelopment"/>
+    </Student>
+
+    <Student rdf:about="http://example.org/education#student_005">
+        <hasName>Emma Thompson</hasName>
+        <hasStudentID>2020001</hasStudentID>
+        <hasEmail>emma.thompson@student.university.edu</hasEmail>
+        <hasGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.7</hasGPA>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</hasYear>
+        <enrollsIn rdf:resource="http://example.org/education#CS401"/>
+        <enrollsIn rdf:resource="http://example.org/education#BUS301"/>
+        <hasSkill rdf:resource="http://example.org/education#Programming"/>
+        <hasSkill rdf:resource="http://example.org/education#Algorithms"/>
+        <hasSkill rdf:resource="http://example.org/education#Databases"/>
+        <hasSkill rdf:resource="http://example.org/education#MachineLearning"/>
+        <hasSkill rdf:resource="http://example.org/education#Statistics"/>
+        <hasSkill rdf:resource="http://example.org/education#ProjectManagement"/>
+    </Student>
+
+    <Student rdf:about="http://example.org/education#student_006">
+        <hasName>Frank Lee</hasName>
+        <hasStudentID>2022001</hasStudentID>
+        <hasEmail>frank.lee@student.university.edu</hasEmail>
+        <hasGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.4</hasGPA>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasYear>
+        <enrollsIn rdf:resource="http://example.org/education#CS101"/>
+        <enrollsIn rdf:resource="http://example.org/education#MATH101"/>
+        <enrollsIn rdf:resource="http://example.org/education#BUS101"/>
+        <hasSkill rdf:resource="http://example.org/education#Programming"/>
+    </Student>
+
+    <Student rdf:about="http://example.org/education#student_007">
+        <hasName>Grace Chen</hasName>
+        <hasStudentID>2022002</hasStudentID>
+        <hasEmail>grace.chen@student.university.edu</hasEmail>
+        <hasGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.2</hasGPA>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasYear>
+        <enrollsIn rdf:resource="http://example.org/education#MATH101"/>
+        <enrollsIn rdf:resource="http://example.org/education#BUS101"/>
+        <hasSkill rdf:resource="http://example.org/education#MathematicalAnalysis"/>
+    </Student>
+
+    <Student rdf:about="http://example.org/education#student_008">
+        <hasName>Henry Kim</hasName>
+        <hasStudentID>2021005</hasStudentID>
+        <hasEmail>henry.kim@student.university.edu</hasEmail>
+        <hasGPA rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.8</hasGPA>
+        <hasYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasYear>
+        <enrollsIn rdf:resource="http://example.org/education#CS201"/>
+        <enrollsIn rdf:resource="http://example.org/education#MATH201"/>
+        <hasSkill rdf:resource="http://example.org/education#Programming"/>
+        <hasSkill rdf:resource="http://example.org/education#Algorithms"/>
+        <hasSkill rdf:resource="http://example.org/education#MathematicalAnalysis"/>
+    </Student>
+
+</rdf:RDF>

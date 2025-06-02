@@ -1,0 +1,74 @@
+
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Education Management System{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1>📊 Education Management Dashboard</h1>
+        <p class="lead">基于语义网技术的智能教育课程管理系统</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">👥 学生管理</h5>
+                <p class="card-text">查看学生信息、学习进度和个性化推荐</p>
+                <a href="/students" class="btn btn-primary">查看学生</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">📚 课程管理</h5>
+                <p class="card-text">管理课程信息、先修要求和注册情况</p>
+                <a href="/courses" class="btn btn-primary">查看课程</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">📈 数据分析</h5>
+                <p class="card-text">查看统计数据和可视化分析报告</p>
+                <a href="/analytics" class="btn btn-primary">查看分析</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">🤖 系统特性</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>语义网技术</h6>
+                        <ul>
+                            <li><strong>RDF/RDFS</strong>: 结构化数据存储和查询</li>
+                            <li><strong>SPARQL</strong>: 强大的图数据查询语言</li>
+                            <li><strong>OWL</strong>: 本体建模和推理</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>智能功能</h6>
+                        <ul>
+                            <li>🎯 个性化课程推荐</li>
+                            <li>🔍 先修要求检查</li>
+                            <li>📊 学习路径规划</li>
+                            <li>📈 性能分析和建议</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

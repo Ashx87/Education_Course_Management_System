@@ -1,0 +1,9 @@
+# requirements.txt
+rdflib==7.0.0
+owlready2==0.46
+SPARQLWrapper==2.0.0
+flask==3.0.0
+networkx==3.2.1
+matplotlib==3.8.2
+pandas==2.1.4
+requests==2.31.0
