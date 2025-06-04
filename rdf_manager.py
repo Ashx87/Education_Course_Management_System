@@ -108,13 +108,14 @@ class SPARQLQueryEngine:
         PREFIX edu: <http://example.org/education#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         
-        SELECT ?student ?name ?studentId ?gpa
+        SELECT DISTINCT ?student ?name ?studentId ?gpa
         WHERE {
             ?student rdf:type edu:Student .
             ?student edu:hasName ?name .
             ?student edu:hasStudentID ?studentId .
             ?student edu:hasGPA ?gpa .
         }
+        GROUP BY ?student ?name ?studentId
         ORDER BY ?name
         """
         
