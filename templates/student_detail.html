@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Student Details{% endblock %}
+{% block content %}
+<h2 class="mb-4">🧑‍🎓 {{ analysis.student_info.name }} ({{ analysis.student_info.student_id }})</h2>
+<p><strong>GPA:</strong> {{ analysis.student_info.gpa }}</p>
+<p><strong>Performance:</strong> {{ analysis.performance_level }}</p>
+
+<h4 class="mt-4">📚 Enrolled Courses</h4>
+<ul class="list-group">
+    {% for course in analysis.enrolled_courses %}
+    <li class="list-group-item">{{ course }}</li>
+    {% else %}
+    <li class="list-group-item">No enrolled courses</li>
+    {% endfor %}
+</ul>
+
+<h4 class="mt-4">🧠 System Suggestions</h4>
+<ul class="list-group">
+    {% for tip in analysis.suggestions %}
+    <li class="list-group-item">{{ tip }}</li>
+    {% endfor %}
+</ul>
+
+<h4 class="mt-4">🧭 Next Course Recommendations</h4>
+<ul class="list-group">
+    {% for rec in analysis.next_recommendations %}
+    <li class="list-group-item">{{ rec }}</li>
+    {% else %}
+    <li class="list-group-item">No recommendations</li>
+    {% endfor %}
+</ul>
+
+<a class="btn btn-secondary mt-3" href="{{ url_for('students') }}">← Back to Students</a>
+{% endblock %}

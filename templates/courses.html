@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Courses{% endblock %}
+{% block content %}
+<h2 class="mb-4">📘 Course List</h2>
+<table class="table table-hover table-bordered">
+    <thead class="table-light">
+        <tr>
+            <th>Course Code</th>
+            <th>Name</th>
+            <th>Credits</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for course in courses %}
+        <tr>
+            <td><a href="{{ url_for('course_detail', course_code=course.code) }}">{{ course.code }}</a></td>
+            <td>{{ course.name }}</td>
+            <td>{{ course.credits }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

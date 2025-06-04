@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Recommendations{% endblock %}
+{% block content %}
+<h2 class="mb-4">🎯 Course Recommendations for {{ student.name }}</h2>
+<p><strong>GPA:</strong> {{ student.gpa }}</p>
+
+<ul class="list-group">
+    {% for course in recommendations %}
+    <li class="list-group-item">{{ course }}</li>
+    {% else %}
+    <li class="list-group-item">No recommendations</li>
+    {% endfor %}
+</ul>
+
+<a class="btn btn-secondary mt-3" href="{{ url_for('student_detail', student_id=student.id) }}">← Back to Student Details</a>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Course Details{% endblock %}
+{% block content %}
+<h2 class="mb-4">📘 {{ course.name }} ({{ course.code }})</h2>
+<p><strong>Credits:</strong> {{ course.credits }}</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4>👨‍🏫 Instructors</h4>
+        <ul class="list-group">
+            {% for instructor in instructors %}
+            <li class="list-group-item">{{ instructor.name }} ({{ instructor.id }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h4>📚 Prerequisites</h4>
+        <ul class="list-group">
+            {% for prereq in prerequisites %}
+            <li class="list-group-item">{{ prereq }}</li>
+            {% else %}
+            <li class="list-group-item">None</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<h4 class="mt-4">🧑‍🎓 Enrolled Students</h4>
+<ul class="list-group">
+    {% for enrollment in enrollments %}
+    <li class="list-group-item">{{ enrollment.Name }} ({{ enrollment.Student_ID }})</li>
+    {% else %}
+    <li class="list-group-item">No students enrolled</li>
+    {% endfor %}
+</ul>
+
+<a class="btn btn-secondary mt-3" href="{{ url_for('courses') }}">← Back to Courses</a>
+{% endblock %}

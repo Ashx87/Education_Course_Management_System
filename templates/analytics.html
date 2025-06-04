@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Analytics{% endblock %}
+{% block content %}
+<h2 class="mb-4">📊 System Analytics</h2>
+
+<h4>📈 Course Enrollment Statistics</h4>
+<table class="table table-striped">
+    <thead class="table-light">
+        <tr>
+            <th>Course</th>
+            <th>Enrollments</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for stat in enrollment_stats %}
+        <tr>
+            <td>{{ stat.Course }}</td>
+            <td>{{ stat.Enrollment }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div class="chart-container">
+    <img class="img-fluid" src="data:image/png;base64,{{ enrollment_chart }}" alt="Enrollment Chart">
+</div>
+
+<h4 class="mt-5">📊 GPA Statistics</h4>
+<p>Average: {{ gpa_stats.average }} | Max: {{ gpa_stats.maximum }} | Min: {{ gpa_stats.minimum }}</p>
+
+<div class="chart-container">
+    <img class="img-fluid" src="data:image/png;base64,{{ gpa_chart }}" alt="GPA Chart">
+</div>
+{% endblock %}
